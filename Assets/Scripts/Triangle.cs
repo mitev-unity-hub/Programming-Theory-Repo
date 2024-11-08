@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
-public class Square : BaseShape // INHERITANCE
+
+public class Triangle : BaseShape
 {
-    private string _name = "Square";
-    
+    private string _name = "Triangle"; 
     public override void GiveFeedback()
     {
         _speachBubbleText.text = "I am " + _name + ". Base Object name is: " + BaseObjectName;
@@ -14,8 +13,7 @@ public class Square : BaseShape // INHERITANCE
 
     private void OnMouseDown()
     {
-        Toggle(); // ABSTRACTION”
-        GiveFeedback(); // ABSTRACTION”
+        Toggle(); // ABSTRACTION
+        GiveFeedback(); // ABSTRACTION
     }
-
 }
